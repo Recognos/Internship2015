@@ -62,49 +62,62 @@ Your program might respond with something like:
 ```
 Go for as much accuracy as you can possibly squeeze out of it.
 
-## Problem 8:
-Source: https://mindcoding.ro/pb/printf
-You are given n variable declarations and a printf instruction. You must display the output of the instruction.
-A variable declaration is a string of the form name=value, where name is a single lowercase letter of the latin alphabet.
-The printf instruction is a greatly simplified version of the homonymous C function. For this problem:
-A printf instruction is a string of the form format_string, arg1, arg2, ... (with 0 or more arguments)
-A format_string is a sequence of words, separated by spaces (exactly one space between each two consecutive words). The words which start with a % are special; they are called format specifiers. The ith format specifier will be replaced with the value of the ith variable, formatted according to these rules:
-If the format specifier is %s, the value is a string which should be printed directly
-If the format specifier is %WIDTHd, the value is an integer which should be padded with spaces until it is WIDTH characters long, then printed. Thus:
-If the value is 5 and the format string is %3d, print " 5" (without the quotes).
-If the value is 100 and the format string is %3d, print "100" (without the quotes).
-If the format specifier is %.PRECISIONf, the value is a decimal number which should be rounded to PRECISION digits after the decimal point, then printed. Thus:
-If the value is 5.31 and the format string is %.2f, print "5.3" (without the quotes).
-If the value is 3.14159 and the format string is %.4f, print "3.1416" (without the quotes).
-If the value is 1.1 and the format string is %.5f, print "1.10000" (without the quotes)
-All other words (those not starting with %) should be printed literally
-Input
-N, the number of variables, will be on the first line. The next N lines will contain variable declarations (variable_name=value, with no spaces next to the =).
-The printf instruction (format,variable_name1,variable_name2,...,variable_namen, with one comma between each two arguments) will be on the last line.
-Output
+## Problem 8
+
+#### Source: https://mindcoding.ro/pb/printf
+
+You are given n _variable declaration_s and a _printf instruction_. You must display the output of the instruction.
+ A _variable declaration_ is a string of the form `name=value`, where `name` is a single lowercase letter of the latin alphabet.
+ The _printf instruction_ is a greatly simplified version of the homonymous C function. For this problem:
+
+A _printf instruction_ is a string of the form `_format_string_, arg1, arg2, ...` (with 0 or more arguments)
+ A _format_string_ is a sequence of words, separated by spaces (exactly one space between each two consecutive words). The words which start with a `%` are special; they are called format specifiers. The `i`th format specifier will be replaced with the value of the `i`th variable, formatted according to these rules:
+
+*   If the format specifier is `%s`, the value is a string which should be printed directly
+*   If the format specifier is `%WIDTHd`, the value is an integer which should be padded with spaces until it is WIDTH characters long, then printed. Thus:
+    *   If the value is 5 and the format string is `%3d`, print `" 5"` (without the quotes).
+    *   If the value is 100 and the format string is `%3d`, print `"100"` (without the quotes).
+*   If the format specifier is `%.PRECISIONf`, the value is a decimal number which should be rounded to PRECISION digits after the decimal point, then printed. Thus:
+    *   If the value is 5.31 and the format string is `%.2f`, print `"5.3"` (without the quotes).
+    *   If the value is 3.14159 and the format string is `%.4f`, print `"3.1416"` (without the quotes).
+    *   If the value is 1.1 and the format string is `%.5f`, print `"1.10000"` (without the quotes)
+*   All other words (those not starting with `%`) should be printed literally
+
+## Input
+
+`N`, the number of variables, will be on the first line. The next N lines will contain variable declarations (`variable_name=value`, with no spaces next to the `=`).
+ The printf instruction (`format,variable_name<sub>1</sub>,variable_name<sub>2</sub>,...,variable_name<sub>n</sub>`, with one comma between each two arguments) will be on the last line.
+
+## Output
+
 The output of the instruction will be on solely one line.
-Constraints
+
+## Constraints
+
 The names of the variables are made up of one letter.
-The format string will not contain the character ,.
-1 ≤ WIDTH, PRECISION ≤ 5
-1 < N < 10
-All lines in the input contain less than 100 characters.
-For the %WIDTHd format specifier, the integer is at most WIDTH digits long.
-Example
-Input	Output
-2
-o=widgets
-p=13.365
-Buy %s @ %.2f each,o,p	Buy widgets @ 13.37 each
-3
-a=1
-b=10
-c=100
-The first three powers of %s are %4d %4d %4d,a,a,b,c	The first three powers of 1 are    1   10  100
-2
-b=3
-a=Ana
-%s are %s mere,a,b	Ana are 3 mere
+ The format string will **not** contain the character `,`.
+`1 ≤ WIDTH, PRECISION ≤ 5`
+`1 < N < 10`
+ All lines in the input contain less than 100 characters.
+ For the `%WIDTHd` format specifier, the integer is at most `WIDTH` digits long.
+
+## Example
+
+| Input | Output |
+| --- | --- |
+| 2
+|o=widgets
+|p=13.365
+|Buy %s @ %.2f each,o,p | Buy widgets @ 13.37 each |
+| 3
+|a=1
+|b=10
+|c=100
+|The first three powers of %s are %4d %4d %4d,a,a,b,c | The first three powers of 1 are    1   10  100 |
+| 2
+|b=3
+|a=Ana
+|%s are %s mere,a,b| Ana are 3 mere |
 
 ## Problem 9:
 Implement a Secret Santa selection program.
