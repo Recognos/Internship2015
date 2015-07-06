@@ -4,16 +4,17 @@ Intro challenges for the 2015 Internship
 When solving you should focus on producing clear, easy to understand code. If you have questions, don't hesitate to ask. You should try to create efficient solutions, but main goal is readability. 
 
 ## Problem 1:
-Write a program that generates all two-word (from the attached wordlist.txt) anagrams of the string "documenting". wordlist.txt 
+Write a program that generates all two-word (from the attached wordlist.txt) anagrams of the string "documenting". [wordlist.txt](https://github.com/Recognos/Internship2015/blob/master/wordlist-problem1.txt) 
 
 ## Problem  2:
 Write a program that solves word-chain puzzles. There’s a type of puzzle where the challenge is to build a chain of words, starting with one particular word and ending with another.
 Successive entries in the chain must all be real words, and each can differ from the previous word by just one letter. For example, you can get from “cat” to “dog” using the following chain: "cat" - "cot" - "cog" - "dog".
-wordlist2.txt
+[wordlist2.txt](https://github.com/Recognos/Internship2015/blob/master/wordlist-problem2.txt)
 
 ## Problem 3:
 Convert a numeric string to integer (of float) without using any builtin conversion functions
-Problem 4:
+
+## Problem 4:
 Given a file containing one word per line, print out all the combinations of words that are anagrams; each line in the output contains all the words from the input that are anagrams of each other.
 
 ## Problem 5:
