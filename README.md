@@ -36,7 +36,7 @@ Converting Arabic to Roman: We would like to be able to convert Arabic numbers i
 Create a tool that will allow you to preview an image file at the command-line in pure text.
 Your program will need to read in an image, in whatever format you want to support, and respond with a text representation of the image that fits in the terminal.
 For example, given the image:
-Ducky
+[Ducky](http://rubyquiz.com/images/Ducky.png)
 Your program might respond with something like:
 ```
 ........--**####**::::::::::::........
